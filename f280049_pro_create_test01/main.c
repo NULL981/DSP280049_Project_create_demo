@@ -22,10 +22,10 @@ void main(void)
         // Turn on LED
         GPIO_writePin(DEVICE_GPIO_PIN_LED2, 0);
         // Delay for a bit.
-        DEVICE_DELAY_US(500000);
+        DEVICE_DELAY_US(50000);
         // Turn off LED
         GPIO_writePin(DEVICE_GPIO_PIN_LED2, 1);
         // Delay for a bit.
-        DEVICE_DELAY_US(500000);
+        DEVICE_DELAY_US(50000);
     }
 }
