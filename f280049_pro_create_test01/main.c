@@ -1,5 +1,6 @@
 #include "driverlib.h"
 #include "device.h"
+#include "f28004x_device.h"
 void main(void)
 {
     // Initialize device clock and peripherals
@@ -20,11 +21,13 @@ void main(void)
     for(;;)
     {
         // Turn on LED
-        GPIO_writePin(DEVICE_GPIO_PIN_LED2, 0);
+//        GPIO_writePin(DEVICE_GPIO_PIN_LED2, 0);
+        GpioDataRegs.GPBDAT.bit.GPIO34 = 0;
         // Delay for a bit.
         DEVICE_DELAY_US(50000);
         // Turn off LED
-        GPIO_writePin(DEVICE_GPIO_PIN_LED2, 1);
+//        GPIO_writePin(DEVICE_GPIO_PIN_LED2, 1);
+        GpioDataRegs.GPBDAT.bit.GPIO34 = 1;
         // Delay for a bit.
         DEVICE_DELAY_US(50000);
     }
