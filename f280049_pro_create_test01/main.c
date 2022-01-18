@@ -4,7 +4,7 @@
 void main(void)
 {
     // Initialize device clock and peripherals
-    Device_init();
+    Device_init();//test
     // Initialize GPIO and configure the GPIO pin as a push-pull output
     Device_initGPIO();
     GPIO_setPadConfig(DEVICE_GPIO_PIN_LED2, GPIO_PIN_TYPE_STD);
